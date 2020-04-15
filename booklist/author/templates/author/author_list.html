@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>This is the list of Authors page</h1>
+    {% for item in listofauthors %} <br>
+        {{ item.authorname }} <br>
+        {{ item.authorage }} <br>
+        <a href = "{% url 'author:author-detail' item.id %}">View Author Detail</a> <br>
+    {% endfor %}
+
+    <a href = "{% url 'author:author-create' 1 %}" >Add Author</a> <br>
+
+</body>
+</html>
