@@ -8,4 +8,3 @@ urlpatterns = [
     path('<int:listofbooks_pk>/new/', AuthorCreateView.as_view(), name='author-create'),
 ]
     
-    
